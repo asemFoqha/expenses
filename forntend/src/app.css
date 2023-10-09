@@ -1,0 +1,8 @@
+#root {
+  --navbar-height: 50px;
+}
+
+.full-screen-container {
+  height: calc(100vh - var(--navbar-height));
+  background-color: red;
+}
