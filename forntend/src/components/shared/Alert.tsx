@@ -6,7 +6,7 @@ interface Props {
 
 const Alert: FC<Props> = ({ children = "alert" }) => {
   return (
-    <div className="alert alert-primary" role="alert">
+    <div className="alert alert-danger" role="alert">
       {children}
     </div>
   );

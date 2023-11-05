@@ -1,10 +1,15 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
+import Alert from "./Alert";
 
 interface Props {
-  children: string;
+  children: ReactNode;
 }
 
-const ErrorMessage: FC<Props> = () => {
-  return <div></div>;
+const ErrorMessage: FC<Props> = ({ children }) => {
+  return (
+    <div className="mt-2">
+      <Alert >{children}</Alert>
+    </div>
+  );
 };
 export default ErrorMessage;

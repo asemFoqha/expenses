@@ -2,7 +2,14 @@
   --navbar-height: 50px;
 }
 
+.navbar-height {
+  height: var(--navbar-height) !important;
+}
+
 .full-screen-container {
   height: calc(100vh - var(--navbar-height));
-  background-color: red;
+}
+
+.max-width-400 {
+  max-width: 400px;
 }

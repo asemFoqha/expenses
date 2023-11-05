@@ -1,8 +1,13 @@
-import SiginUp from "./pages/login/SiginUp";
 import "./app.css";
+import RoutesComponent from "./components/routs/RoutesComponent";
+import AuthContextComponent from "./components/auth/AuthContextComponent";
 
 function App() {
-  return <SiginUp />;
+  return (
+    <AuthContextComponent>
+      <RoutesComponent />
+    </AuthContextComponent>
+  );
 }
 
 export default App;
