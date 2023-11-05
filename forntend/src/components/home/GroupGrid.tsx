@@ -9,7 +9,7 @@ const GroupGrid = () => {
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={6}>
       {data?.map((group) => (
-        <GroupCard key={group._id} />
+        <GroupCard title={group.title} key={group._id} />
       ))}
     </SimpleGrid>
   );
