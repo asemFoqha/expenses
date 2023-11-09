@@ -1,15 +1,19 @@
-import { GridItem, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
+import { Group } from "../../pages/home/services/homeService";
 import GroupCard from "./GroupCard";
-import useGroups from "../../hooks/useGroups";
+import { AxiosError } from "axios";
 
-const GroupGrid = () => {
-  const { data, error } = useGroups();
+interface Props {
+  data?: Group[] | null;
+  error?: AxiosError;
+}
 
+const GroupGrid = ({ data, error }: Props) => {
   if (error) return null;
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={6}>
       {data?.map((group) => (
-        <GroupCard title={group.title} key={group._id} />
+        <GroupCard group={group} key={group._id} />
       ))}
     </SimpleGrid>
   );
